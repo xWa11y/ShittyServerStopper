@@ -1,0 +1,46 @@
+v0.2.7
+- Fixed Update Form being hidden
+_______________________________________________________________________________
+v0.2.6
+- Fixed Blocked IPs Not Saving
+- Fixed Not Being Able to add custom IPs
+- Fixed Loading of Custom IPs
+- Fixed First Time Setup being ran when it's not suppose to
+- Changed About Form UI
+- Changed New Update Form UI
+- Added Error 6: Rule Already Exists
+- Removed Some Notifications
+- Reduced Notification linger time
+_______________________________________________________________________________
+v0.2.5
+- Fixed AutoUpdater Not Saving Settings
+- Fixed Being Able To Export Nothing
+- Changed About Form UI 
+- Added Notifications 
+_______________________________________________________________________________
+v0.2.4
+- Fixed AutoUpdater not uninstalling
+- Changed New Update UI Colours
+_______________________________________________________________________________
+v0.2.3
+- Added AutoUpdater
+_______________________________________________________________________________
+v0.2.2
+- Fixed Duplicating Customs IPs upon closing (Causing multiple of the same ip to be blocked)
+- Fixed Custom IPs displaying incorrectly
+- Fixed Custom IP Removal
+- Fixed MISC IPs not saving correctly.
+- Changed the About Form Layout
+- Changed Button Hover Colour
+- Added the Importing/Exporting of IP Packs.
+- Added ContextMenus for the Custom IP TextBox, and the Current Blocked IPs ListBox.
+- Added ToolTips for each button.
+- Added the 'View Changelog' Option in the About Form.
+- Added more servers.
+_______________________________________________________________________________
+v0.2
+- Fixed Custom IPs 
+- Changed UI Colours.
+- Changed the CheckBoxes
+- Added the About Form
+- Added more servers
