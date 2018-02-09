@@ -86,5 +86,11 @@ namespace Shitty_Server_Stopper
         {
             Process.Start("http://steamcommunity.com/profiles/76561198145268525/");
         }
+
+        private void linkLabel10_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Application.Exit();
+            Process.Start(Environment.GetFolderPath(Environment.SpecialFolder.CommonProgramFilesX86) + @"\shitty_server_stopper_uninstaller.exe");
+        }
     }
 }

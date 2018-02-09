@@ -72,6 +72,7 @@
             this.ipList.Font = new System.Drawing.Font("MS Reference Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ipList.ForeColor = System.Drawing.SystemColors.MenuHighlight;
             this.ipList.FormattingEnabled = true;
+            this.ipList.IntegralHeight = false;
             this.ipList.ItemHeight = 16;
             this.ipList.Location = new System.Drawing.Point(12, 35);
             this.ipList.Name = "ipList";
@@ -79,6 +80,7 @@
             this.ipList.TabIndex = 0;
             this.ipList.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.ipList_DrawItem);
             this.ipList.SelectedIndexChanged += new System.EventHandler(this.ipList_SelectedIndexChanged);
+            this.ipList.KeyDown += new System.Windows.Forms.KeyEventHandler(this.ipList_KeyDown);
             this.ipList.MouseDown += new System.Windows.Forms.MouseEventHandler(this.ipList_MouseDown);
             // 
             // ipCMS
@@ -92,22 +94,21 @@
             this.ipCMS.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.Table;
             this.ipCMS.Name = "ipCMS";
             this.ipCMS.ShowImageMargin = false;
-            this.ipCMS.Size = new System.Drawing.Size(128, 70);
+            this.ipCMS.Size = new System.Drawing.Size(94, 48);
             this.ipCMS.Opening += new System.ComponentModel.CancelEventHandler(this.ipCMS_Opening);
             // 
             // removeToolStripMenuItem
             // 
             this.removeToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
             this.removeToolStripMenuItem.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.removeToolStripMenuItem.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.removeToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.removeToolStripMenuItem.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.removeToolStripMenuItem.Name = "removeToolStripMenuItem";
             this.removeToolStripMenuItem.ShortcutKeys = System.Windows.Forms.Keys.Delete;
             this.removeToolStripMenuItem.ShowShortcutKeys = false;
-            this.removeToolStripMenuItem.Size = new System.Drawing.Size(127, 22);
+            this.removeToolStripMenuItem.Size = new System.Drawing.Size(93, 22);
             this.removeToolStripMenuItem.Text = "Remove";
             this.removeToolStripMenuItem.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.removeToolStripMenuItem.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.removeToolStripMenuItem.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.removeToolStripMenuItem.Click += new System.EventHandler(this.removeToolStripMenuItem_Click);
             // 
             // copyToolStripMenuItem
@@ -115,8 +116,9 @@
             this.copyToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
             this.copyToolStripMenuItem.ForeColor = System.Drawing.SystemColors.MenuHighlight;
             this.copyToolStripMenuItem.Name = "copyToolStripMenuItem";
-            this.copyToolStripMenuItem.Size = new System.Drawing.Size(127, 22);
+            this.copyToolStripMenuItem.Size = new System.Drawing.Size(93, 22);
             this.copyToolStripMenuItem.Text = "Copy";
+            this.copyToolStripMenuItem.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.copyToolStripMenuItem.Click += new System.EventHandler(this.copyToolStripMenuItem_Click);
             // 
             // ipTextBox
@@ -132,6 +134,7 @@
             this.ipTextBox.Size = new System.Drawing.Size(166, 20);
             this.ipTextBox.TabIndex = 1;
             this.ipTextBox.TextChanged += new System.EventHandler(this.ipTextBox_TextChanged);
+            this.ipTextBox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.ipTextBox_KeyDown);
             // 
             // iptextContext
             // 
@@ -146,6 +149,7 @@
             this.selectAllToolStripMenuItem});
             this.iptextContext.Name = "iptextContext";
             this.iptextContext.ShowImageMargin = false;
+            this.iptextContext.ShowItemToolTips = false;
             this.iptextContext.Size = new System.Drawing.Size(98, 126);
             // 
             // undoToolStripMenuItem
@@ -200,6 +204,7 @@
             // 
             this.selectAllToolStripMenuItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
             this.selectAllToolStripMenuItem.ForeColor = System.Drawing.SystemColors.MenuHighlight;
+            this.selectAllToolStripMenuItem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.selectAllToolStripMenuItem.Name = "selectAllToolStripMenuItem";
             this.selectAllToolStripMenuItem.Size = new System.Drawing.Size(97, 22);
             this.selectAllToolStripMenuItem.Text = "Select All";
@@ -213,25 +218,27 @@
             this.ipLabel.Location = new System.Drawing.Point(253, 13);
             this.ipLabel.Name = "ipLabel";
             this.ipLabel.Size = new System.Drawing.Size(61, 13);
-            this.ipLabel.TabIndex = 2;
+            this.ipLabel.TabIndex = 11;
             this.ipLabel.Text = "IP Address:";
             // 
             // addButton
             // 
             this.addButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.addButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             this.addButton.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.addButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(54)))), ((int)(((byte)(54)))));
+            this.addButton.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(48)))));
+            this.addButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
             this.addButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.addButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.addButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
+            this.addButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(119)))), ((int)(((byte)(119)))), ((int)(((byte)(119)))));
             this.addButton.Location = new System.Drawing.Point(492, 9);
             this.addButton.Name = "addButton";
             this.addButton.Size = new System.Drawing.Size(83, 21);
-            this.addButton.TabIndex = 5;
+            this.addButton.TabIndex = 2;
             this.addButton.Text = "Add";
             this.addButton.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.toolTip1.SetToolTip(this.addButton, "Block entered IP adress.");
-            this.addButton.UseVisualStyleBackColor = true;
+            this.addButton.UseVisualStyleBackColor = false;
             this.addButton.Click += new System.EventHandler(this.addButton_Click);
             // 
             // titleLabel
@@ -241,7 +248,7 @@
             this.titleLabel.Location = new System.Drawing.Point(9, 13);
             this.titleLabel.Name = "titleLabel";
             this.titleLabel.Size = new System.Drawing.Size(108, 13);
-            this.titleLabel.TabIndex = 6;
+            this.titleLabel.TabIndex = 10;
             this.titleLabel.Text = "Blocked IP Adresses:";
             this.titleLabel.Click += new System.EventHandler(this.titleLabel_Click);
             // 
@@ -255,7 +262,7 @@
             this.hentairapeCheckBox.Location = new System.Drawing.Point(12, 328);
             this.hentairapeCheckBox.Name = "hentairapeCheckBox";
             this.hentairapeCheckBox.Size = new System.Drawing.Size(177, 17);
-            this.hentairapeCheckBox.TabIndex = 7;
+            this.hentairapeCheckBox.TabIndex = 8;
             this.hentairapeCheckBox.Text = "Block ALL Hentai Rape Servers";
             this.hentairapeCheckBox.UseVisualStyleBackColor = true;
             this.hentairapeCheckBox.CheckedChanged += new System.EventHandler(this.hentairapeCheckBox_CheckedChanged);
@@ -270,7 +277,7 @@
             this.xpmCheckBox.Location = new System.Drawing.Point(195, 328);
             this.xpmCheckBox.Name = "xpmCheckBox";
             this.xpmCheckBox.Size = new System.Drawing.Size(252, 17);
-            this.xpmCheckBox.TabIndex = 8;
+            this.xpmCheckBox.TabIndex = 9;
             this.xpmCheckBox.Text = "Block Misc Modded Servers (Not all servers yet)\r\n";
             this.xpmCheckBox.UseVisualStyleBackColor = true;
             this.xpmCheckBox.CheckedChanged += new System.EventHandler(this.xpmCheckBox_CheckedChanged);
@@ -286,49 +293,55 @@
             // button1
             // 
             this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(54)))), ((int)(((byte)(54)))));
+            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(48)))));
+            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
+            this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(119)))), ((int)(((byte)(119)))), ((int)(((byte)(119)))));
             this.button1.Location = new System.Drawing.Point(553, 266);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(23, 23);
-            this.button1.TabIndex = 13;
+            this.button1.TabIndex = 5;
             this.button1.Text = "?";
             this.toolTip1.SetToolTip(this.button1, "Help and Information.");
-            this.button1.UseVisualStyleBackColor = true;
+            this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click_1);
             // 
             // button2
             // 
             this.button2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(54)))), ((int)(((byte)(54)))));
+            this.button2.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(48)))));
+            this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
+            this.button2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(119)))), ((int)(((byte)(119)))), ((int)(((byte)(119)))));
             this.button2.Location = new System.Drawing.Point(121, 266);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(103, 23);
-            this.button2.TabIndex = 14;
+            this.button2.TabIndex = 4;
             this.button2.Text = "Load IP Pack";
             this.toolTip1.SetToolTip(this.button2, "Load an IP pack.");
-            this.button2.UseVisualStyleBackColor = true;
+            this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button3
             // 
             this.button3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             this.button3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(54)))), ((int)(((byte)(54)))));
+            this.button3.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(48)))));
+            this.button3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
+            this.button3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(119)))), ((int)(((byte)(119)))), ((int)(((byte)(119)))));
             this.button3.Location = new System.Drawing.Point(12, 266);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(103, 23);
-            this.button3.TabIndex = 15;
+            this.button3.TabIndex = 3;
             this.button3.Text = "Export IP Pack";
             this.toolTip1.SetToolTip(this.button3, "Share your blocked IPs with others.");
-            this.button3.UseVisualStyleBackColor = true;
+            this.button3.UseVisualStyleBackColor = false;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // lewd4deadCheck
@@ -341,7 +354,7 @@
             this.lewd4deadCheck.Location = new System.Drawing.Point(12, 305);
             this.lewd4deadCheck.Name = "lewd4deadCheck";
             this.lewd4deadCheck.Size = new System.Drawing.Size(175, 17);
-            this.lewd4deadCheck.TabIndex = 11;
+            this.lewd4deadCheck.TabIndex = 6;
             this.lewd4deadCheck.Text = "Block ALL Lewd4Dead Servers";
             this.lewd4deadCheck.UseVisualStyleBackColor = true;
             this.lewd4deadCheck.CheckedChanged += new System.EventHandler(this.lewd4deadCheck_CheckedChanged);
@@ -356,7 +369,7 @@
             this.ydCheck.Location = new System.Drawing.Point(195, 305);
             this.ydCheck.Name = "ydCheck";
             this.ydCheck.Size = new System.Drawing.Size(191, 17);
-            this.ydCheck.TabIndex = 12;
+            this.ydCheck.TabIndex = 7;
             this.ydCheck.Text = "Block ALL Yandere Attack Servers";
             this.ydCheck.UseVisualStyleBackColor = true;
             this.ydCheck.CheckedChanged += new System.EventHandler(this.ydCheck_CheckedChanged);
@@ -385,6 +398,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.ClientSize = new System.Drawing.Size(588, 355);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
@@ -398,8 +412,9 @@
             this.Controls.Add(this.ipLabel);
             this.Controls.Add(this.ipTextBox);
             this.Controls.Add(this.ipList);
+            this.DoubleBuffered = true;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.MinimumSize = new System.Drawing.Size(604, 319);
+            this.MinimumSize = new System.Drawing.Size(604, 394);
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Shitty Server Blocker";

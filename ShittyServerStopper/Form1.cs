@@ -25,7 +25,7 @@ namespace Shitty_Server_Stopper
         }
 
         public Color dlbColor = SystemColors.MenuHighlight;
-        const string version = "0.2.6";
+        const string version = "0.3";
 
         private const string CLSID_FIREWALL_MANAGER =
       "{304CE942-6E39-40D8-943A-B913C40C9CD4}";
@@ -56,7 +56,7 @@ namespace Shitty_Server_Stopper
                 bool exists = false;
                 foreach (string s in "204.11.16.132,139.162.79.149,72.11.148.168,204.11.16.134,167.160.36.76,82.211.30.241,107.161.172.59".Split(','))
                 {
-                    ipList.Items.Add(s);
+                    if (!ipList.Items.Contains(s)) { ipList.Items.Add(s); }              
                 }
                 
                 foreach (INetFwRule rule in fwPolicy2.Rules)
@@ -104,7 +104,7 @@ namespace Shitty_Server_Stopper
                 bool exists = false;                
                 foreach (string s in "139.162.30.4,204.11.16.135,162.217.248.223".Split(','))
                 {
-                    ipList.Items.Add(s);
+                    if (!ipList.Items.Contains(s)) { ipList.Items.Add(s); }
                 }
                 
                 foreach (INetFwRule rule in fwPolicy2.Rules)
@@ -152,7 +152,7 @@ namespace Shitty_Server_Stopper
                 bool exists = false;
                 foreach (string s in "45.32.24.56".Split(','))
                 {
-                    ipList.Items.Add(s);
+                    if (!ipList.Items.Contains(s)) { ipList.Items.Add(s); }
                 }
                 
                 foreach (INetFwRule rule in fwPolicy2.Rules)
@@ -200,7 +200,7 @@ namespace Shitty_Server_Stopper
                 bool exists = false;
                 foreach (string s in "74.91.112.57,66.85.14.37,74.91.116.113,66.150.121.176".Split(','))
                 {
-                    ipList.Items.Add(s);
+                    if (!ipList.Items.Contains(s)) { ipList.Items.Add(s); }
                 }
                 foreach (INetFwRule rule in fwPolicy2.Rules)
                 {
@@ -247,7 +247,7 @@ namespace Shitty_Server_Stopper
                 bool exists = false;
                 foreach (string s in "192.223.27.251,139.99.8.171,216.52.148.77,66.150.121.181,74.91.112.57".Split(','))
                 {
-                    ipList.Items.Add(s);
+                    if (!ipList.Items.Contains(s)) { ipList.Items.Add(s); }
                 }
                 foreach (INetFwRule rule in fwPolicy2.Rules)
                 {
@@ -294,7 +294,7 @@ namespace Shitty_Server_Stopper
                 bool exists = false;
                 foreach (string s in "73.166.184.238,74.91.123.74,74.208.228.57,104.153.108.113".Split(','))
                 {
-                    ipList.Items.Add(s);
+                    if (!ipList.Items.Contains(s)) { ipList.Items.Add(s); }
                 }
                 foreach (INetFwRule rule in fwPolicy2.Rules)
                 {
@@ -341,7 +341,7 @@ namespace Shitty_Server_Stopper
                 bool exists = false;
                 foreach (string s in "68.232.163.38,63.251.20.27,68.232.172.105,72.5.102.151,192.99.47.29,208.167.234.174,208.167.234.179".Split(','))
                 {
-                    ipList.Items.Add(s);
+                    if (!ipList.Items.Contains(s)) { ipList.Items.Add(s); }
                 }
                 foreach (INetFwRule rule in fwPolicy2.Rules)
                 {
@@ -388,7 +388,7 @@ namespace Shitty_Server_Stopper
                 bool exists = false;
                 foreach (string s in "216.52.143.154,107.181.178.201,207.246.66.175,108.61.125.67,66.150.214.154,74.91.126.10".Split(','))
                 {
-                    ipList.Items.Add(s);
+                    if (!ipList.Items.Contains(s)) { ipList.Items.Add(s); }
                 }
                 foreach (INetFwRule rule in fwPolicy2.Rules)
                 {
@@ -435,7 +435,7 @@ namespace Shitty_Server_Stopper
                 bool exists = false;
                 foreach (string s in "74.91.120.197,66.55.154.110,66.55.154.46".Split(','))
                 {
-                    ipList.Items.Add(s);
+                    if (!ipList.Items.Contains(s)) { ipList.Items.Add(s); }
                 }
                 foreach (INetFwRule rule in fwPolicy2.Rules)
                 {
@@ -482,7 +482,7 @@ namespace Shitty_Server_Stopper
                 bool exists = false;
                 foreach (string s in "206.217.139.100,74.91.119.247,192.223.24.17,74.91.126.33,74.91.118.8".Split(','))
                 {
-                    ipList.Items.Add(s);
+                    if (!ipList.Items.Contains(s)) { ipList.Items.Add(s); }
                 }
                 foreach (INetFwRule rule in fwPolicy2.Rules)
                 {
@@ -529,7 +529,7 @@ namespace Shitty_Server_Stopper
                 bool exists = false;
                 foreach (string s in "108.61.10.125,108.61.10.124,192.223.31.191,66.150.121.181,74.91.114.244,68.232.166.105".Split(','))
                 {
-                    ipList.Items.Add(s);
+                    if (!ipList.Items.Contains(s)) { ipList.Items.Add(s); }
                 }
                 foreach (INetFwRule rule in fwPolicy2.Rules)
                 {
@@ -576,7 +576,7 @@ namespace Shitty_Server_Stopper
                 bool exists = false;
                 foreach (string s in "46.174.48.20,46.174.48.189,46.174.52.3,46.174.52.8,46.174.52.26,46.174.54.89,89.184.10.77,91.32.139.191,104.243.46.122,185.50.105.210,188.134.2.223,194.1.236.157,201.82.201.45,201.214.26.128,210.194.213.10,212.75.210.39".Split(','))
                 {
-                    ipList.Items.Add(s);
+                    if (!ipList.Items.Contains(s)) { ipList.Items.Add(s); }
                 }
                 
                 foreach (INetFwRule rule in fwPolicy2.Rules)
@@ -650,6 +650,9 @@ namespace Shitty_Server_Stopper
                 string shortCutSave = Environment.GetFolderPath(Environment.SpecialFolder.StartMenu);
                 file.Save(Path.Combine(shortCutSave, "Shitty Server Stopper.lnk"), false);
                 File.Create(Environment.GetFolderPath(Environment.SpecialFolder.CommonProgramFilesX86) + @"\ShittyServerStopper\firsttimesetupdone.dat").Close();
+
+                File.WriteAllBytes(Environment.GetFolderPath(Environment.SpecialFolder.CommonProgramFilesX86) + @"\shitty_server_stopper_uninstaller.exe", Properties.Resources.shitty_server_stopper_uninstaller);
+              
                 File.Create(Environment.GetFolderPath(Environment.SpecialFolder.CommonProgramFilesX86) + @"\ShittyServerStopper\blocked_ips.dat").Close();
                 Properties.Settings.Default.FirstStartUpDone = true;
                 Properties.Settings.Default.Save();
@@ -678,8 +681,29 @@ namespace Shitty_Server_Stopper
                 Properties.Settings.Default.Save();
                 update2();
             }
-           
-           
+
+            Type typeFWPolicy2 = Type.GetTypeFromCLSID(new Guid(guidFWPolicy2));
+            Type typeFWRule = Type.GetTypeFromCLSID(new Guid(guidRWRule));
+            INetFwPolicy2 fwPolicy2 = (INetFwPolicy2)Activator.CreateInstance(typeFWPolicy2);
+            foreach (INetFwRule rule in fwPolicy2.Rules)
+            {
+                if (rule.Name == "sss_hentairape")
+                {
+                    hentairapeCheckBox.Checked = true;                                 
+                }
+                else if (rule.Name == "sss_lewd4dead")
+                {
+                    lewd4deadCheck.Checked = true;                   
+                }
+                else if (rule.Name == "sss_yandere")
+                {
+                    ydCheck.Checked = true;                 
+                }
+                else if (rule.Name == "sss_misc1" || rule.Name == "sss_misc2" || rule.Name == "sss_misc3" || rule.Name == "sss_misc4" || rule.Name == "sss_misc5" || rule.Name == "sss_misc6" || rule.Name == "sss_misc7" || rule.Name == "sss_misc8" || rule.Name == "sss_misc9")
+                {
+                    xpmCheckBox.Checked = true;                  
+                }
+            }
 
             if (Properties.Settings.Default.NumCIPS > 0)
             {
@@ -886,31 +910,46 @@ namespace Shitty_Server_Stopper
 
         private void addButton_Click(object sender, EventArgs e)
         {
+            addCusIP();
+        }
+       public void addCusIP()
+        {
+            if (ipTextBox.Text == string.Empty) { return; }
+
+            foreach (string s in Properties.Resources.complete_list.Split(','))
+            {
+                if (s == ipTextBox.Text)
+                {
+                    MessageBox.Show(this, "Error 7: This IP is part of a group.", "Error 7", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    ipTextBox.Text = "";
+                    return;
+                }
+            }
             try
             {
                 if (ValidateIPv4(ipTextBox.Text) == true)
-                {            
-                         
-                        bool addtolist = false;
-                        if (ipList.Items.Count > 0)
+                {
+
+                    bool addtolist = false;
+                    if (ipList.Items.Count > 0)
+                    {
+                        foreach (string item in ipList.Items)
                         {
-                             foreach (string item in ipList.Items)
-                             {
-                                if (item == ipTextBox.Text)
-                                {
-                                    MessageBox.Show(this, "Error 1: That IP address is already being blocked.", "Error 1", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                                    addtolist = false;
-                                }
-                                else
-                                {
-                                    addtolist = true;
-                                }
+                            if (item == ipTextBox.Text)
+                            {
+                                MessageBox.Show(this, "Error 1: That IP address is already being blocked.", "Error 1", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                addtolist = false;
                             }
-                        }   
-                        else
-                        {
-                        addtolist = true;
+                            else
+                            {
+                                addtolist = true;
+                            }
                         }
+                    }
+                    else
+                    {
+                        addtolist = true;
+                    }
 
                     if (addtolist == true)
                     {
@@ -966,22 +1005,20 @@ namespace Shitty_Server_Stopper
                     return;
                 }
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 MessageBox.Show(this, "Error 4:" + ex, "Error 4", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-           
-
-
-        
-
             ipTextBox.Text = "";
         }
-       
              
            
         
         private void removeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            removeSelected();
+        }
+        public void removeSelected()
         {
             try
             {
@@ -998,15 +1035,14 @@ namespace Shitty_Server_Stopper
                         ipList.Items.Remove(ipList.SelectedItem);
                     }
                 }
-              
+
             }
             catch
             {
                 MessageBox.Show(this, "Error 2: You cannot remove this item.", "Error 2", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-           
-        }
 
+        }
         private void button1_Click_1(object sender, EventArgs e)
         {
             Form About = new About();
@@ -1100,6 +1136,7 @@ namespace Shitty_Server_Stopper
             {
                 if (File.Exists(Environment.GetFolderPath(Environment.SpecialFolder.CommonProgramFilesX86) + "\\ShittyServerStopper\\blocked_ips.dat"))
                 {
+                    if (File.ReadAllText(Environment.GetFolderPath(Environment.SpecialFolder.CommonProgramFilesX86) + "\\ShittyServerStopper\\blocked_ips.dat") == string.Empty) { return; }
                     string content = File.ReadAllText(Environment.GetFolderPath(Environment.SpecialFolder.CommonProgramFilesX86) + "\\ShittyServerStopper\\blocked_ips.dat");
                     exportIP.ShowDialog();
                     if (exportIP.FileName != "")
@@ -1219,6 +1256,22 @@ namespace Shitty_Server_Stopper
             else
             {
                 ipCMS.Enabled = true;
+            }
+        }
+
+        private void ipTextBox_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                addCusIP();
+            }
+        }
+
+        private void ipList_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Delete)
+            {
+                removeSelected();
             }
         }
     }
