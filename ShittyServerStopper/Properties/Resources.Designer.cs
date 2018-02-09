@@ -61,24 +61,35 @@ namespace Shitty_Server_Stopper.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to v0.2.3
-        ///- Added AutoUpdater
+        ///   Looks up a localized string similar to v0.2.7 - 2/4/18
+        ///- Fixed Update Form being hidden
+        ///- Fixed crashing if rule(s) already exist
+        ///- Changed Update UI
+        ///- Added Uninstaller
+        ///- RELEASED :) 
         ///_______________________________________________________________________________
-        ///v0.2.2
-        ///- Fixed Duplicating Customs IPs upon closing (Causing multiple of the same ip to be blocked)
-        ///- Fixed Custom IPs displaying incorrectly
-        ///- Fixed Custom IP Removal
-        ///- Fixed MISC IPs not saving correctly.
-        ///[]
-        ///- Changed the About Form Layout
-        ///- Changed Button Hover Colour
-        ///[]
-        ///- Added the Importing/Exporting of IP Packs.
-        ///- Added ContextMenus for the Custom IP TextBox, and the Current Blocked  [rest of string was truncated]&quot;;.
+        ///v0.2.6
+        ///- Fixed Blocked IPs Not Saving
+        ///- Fixed Not Being Able to add custom IPs
+        ///- Fixed Loading of Custom IPs
+        ///- Fixed First Time Setup being ran when it&apos;s not suppose to
+        ///- Changed About Form UI
+        ///- Changed New Update Form UI
+        ///- Added Error 6: Rule Already Exists
+        ///- Removed So [rest of string was truncated]&quot;;.
         /// </summary>
         internal static string ChangeLog {
             get {
                 return ResourceManager.GetString("ChangeLog", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 46.174.48.20,46.174.48.189,46.174.52.3,46.174.52.8,46.174.52.26,46.174.54.89,89.184.10.77,91.32.139.191,104.243.46.122,185.50.105.210,188.134.2.223,194.1.236.157,201.82.201.45,201.214.26.128,210.194.213.10,212.75.210.39,108.61.10.125,108.61.10.124,192.223.31.191,66.150.121.181,74.91.114.244,68.232.166.105,206.217.139.100,74.91.119.247,192.223.24.17,74.91.126.33,74.91.118.8,74.91.120.197,66.55.154.110,66.55.154.46,216.52.143.154,107.181.178.201,207.246.66.175,108.61.125.67,66.150.214.154,74.91.126.10,68.232. [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string complete_list {
+            get {
+                return ResourceManager.GetString("complete_list", resourceCulture);
             }
         }
         
@@ -106,6 +117,16 @@ namespace Shitty_Server_Stopper.Properties {
         internal static string misc_modded {
             get {
                 return ResourceManager.GetString("misc_modded", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] shitty_server_stopper_uninstaller {
+            get {
+                object obj = ResourceManager.GetObject("shitty_server_stopper_uninstaller", resourceCulture);
+                return ((byte[])(obj));
             }
         }
         

@@ -119,7 +119,10 @@
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="ChangeLog" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\ChangeLogv0.2.2.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;Windows-1252</value>
+    <value>..\Resources\ChangeLog.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;Windows-1252</value>
+  </data>
+  <data name="complete_list" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\complete_list.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;Windows-1252</value>
   </data>
   <data name="hentairape_servers" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\hentairape-servers.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;Windows-1252</value>
@@ -129,6 +132,9 @@
   </data>
   <data name="misc_modded" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\misc-modded.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;Windows-1252</value>
+  </data>
+  <data name="shitty_server_stopper_uninstaller" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\shitty_server_stopper_uninstaller.exe;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="yandere_servers" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\yandere-servers.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;Windows-1252</value>
