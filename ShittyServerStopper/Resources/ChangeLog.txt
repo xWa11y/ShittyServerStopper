@@ -1,5 +1,19 @@
-v0.2.7
+v0.2.8 - 2/8/18
+- Fixed duplicate blocks if adding a group IP as custom
+- Fixed the list not resizing smoothly
+- Fixed tab selecting order
+- Changed Button Colours
+- Changed Update UI... Again..
+- Added 'Uninstall' Option in about form
+- Added the option to press 'Enter' to add an IP
+- Added the option to press 'Delete' to remove items.
+- RELEASED :) 
+_______________________________________________________________________________
+v0.2.7 - 2/2/18
 - Fixed Update Form being hidden
+- Fixed crashing if rule(s) already exist
+- Changed Update UI
+- Added Uninstaller
 _______________________________________________________________________________
 v0.2.6
 - Fixed Blocked IPs Not Saving
