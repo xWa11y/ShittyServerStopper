@@ -39,23 +39,25 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("MS Reference Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.label1.Location = new System.Drawing.Point(8, 9);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.SystemColors.MenuHighlight;
+            this.label1.Location = new System.Drawing.Point(124, 12);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(213, 16);
+            this.label1.Size = new System.Drawing.Size(237, 20);
             this.label1.TabIndex = 0;
-            this.label1.Text = "There\'s A New Update Available!\r\n";
+            this.label1.Text = "There\'s a New Update Available!\r\n";
             // 
             // newChanges
             // 
             this.newChanges.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(54)))), ((int)(((byte)(54)))));
             this.newChanges.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.newChanges.Cursor = System.Windows.Forms.Cursors.Default;
             this.newChanges.Font = new System.Drawing.Font("MS Reference Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.newChanges.ForeColor = System.Drawing.Color.Gray;
             this.newChanges.Location = new System.Drawing.Point(9, 39);
             this.newChanges.Name = "newChanges";
             this.newChanges.ReadOnly = true;
+            this.newChanges.ShortcutsEnabled = false;
             this.newChanges.Size = new System.Drawing.Size(469, 276);
             this.newChanges.TabIndex = 1;
             this.newChanges.TabStop = false;
@@ -94,17 +96,17 @@
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
-            this.panel1.Location = new System.Drawing.Point(7, 33);
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
+            this.panel1.Location = new System.Drawing.Point(-18, 321);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(473, 289);
+            this.panel1.Size = new System.Drawing.Size(532, 62);
             this.panel1.TabIndex = 17;
             // 
             // NewUpdate
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
             this.ClientSize = new System.Drawing.Size(486, 361);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.button2);

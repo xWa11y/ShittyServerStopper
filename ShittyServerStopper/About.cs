@@ -31,7 +31,34 @@ namespace Shitty_Server_Stopper
 
         private void About_Load(object sender, EventArgs e)
         {
+            string insLoc = Environment.GetFolderPath(Environment.SpecialFolder.CommonProgramFilesX86) + "\\ShittyServerStopper\\";
+            if (File.Exists(insLoc + "theme_white.dat"))
+            {
+                this.BackColor = Color.White;
+                panel1.BackColor = Color.FromArgb(224, 224, 224);
+                label1.ForeColor = SystemColors.MenuHighlight;
+                label1.BackColor = Color.White;
 
+                label2.ForeColor = Color.Black;
+                label2.BackColor = Color.FromArgb(224, 224, 224);
+
+                label3.ForeColor = Color.Black;
+                label3.BackColor = Color.FromArgb(224, 224, 224);
+
+                label5.ForeColor = Color.Black;
+                label5.BackColor = Color.FromArgb(224, 224, 224);
+
+                label4.BackColor = Color.FromArgb(224, 224, 224);
+
+                steamLabel.BackColor = Color.FromArgb(224, 224, 224);
+
+                linkLabel1.BackColor = Color.FromArgb(224, 224, 224);
+                linkLabel5.BackColor = Color.FromArgb(224, 224, 224);
+                linkLabel6.BackColor = Color.FromArgb(224, 224, 224);
+                linkLabel7.BackColor = Color.FromArgb(224, 224, 224);
+                linkLabel8.BackColor = Color.FromArgb(224, 224, 224);
+                linkLabel9.BackColor = Color.FromArgb(224, 224, 224);
+            }
         }
 
         private void linkLabel2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)

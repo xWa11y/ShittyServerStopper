@@ -18,15 +18,24 @@ namespace Shitty_Server_Stopper
         {
             InitializeComponent();
         }
-
+        string insLoc = Environment.GetFolderPath(Environment.SpecialFolder.CommonProgramFilesX86) + "\\ShittyServerStopper\\";
         private void NewUpdate_Load(object sender, EventArgs e)
         {
+            if (internetConnection() == false) { this.Close(); return; }
+
             string contents;
             using (var wc = new System.Net.WebClient())
                 contents = wc.DownloadString("http://wallymodz.weebly.com/uploads/5/3/7/8/53782675/new_changes.txt");
 
             newChanges.Text = contents;
 
+            if (File.Exists(insLoc + "theme_white.dat"))
+            {
+                this.BackColor = Color.White;
+                newChanges.BackColor = Color.FromArgb(224, 224, 224);
+                newChanges.ForeColor = Color.Black;
+                panel1.BackColor = Color.Silver;
+            }
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -55,7 +64,23 @@ namespace Shitty_Server_Stopper
 
             Application.Exit();
         }
-
+        public bool internetConnection()
+        {
+            try
+            {
+                using (var client = new WebClient())
+                {
+                    using (client.OpenRead("http://clients3.google.com/generate_204"))
+                    {
+                        return true;
+                    }
+                }
+            }
+            catch
+            {
+                return false;
+            }
+        }
         private void button1_Click(object sender, EventArgs e)
         {         
             this.Close();

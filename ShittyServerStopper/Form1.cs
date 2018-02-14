@@ -14,6 +14,7 @@ using NetFwTypeLib;
 using System.Text.RegularExpressions;
 using System.IO;
 using System.Runtime.InteropServices.ComTypes;
+using System.Net;
 
 namespace Shitty_Server_Stopper
 {
@@ -25,15 +26,19 @@ namespace Shitty_Server_Stopper
         }
 
         public Color dlbColor = SystemColors.MenuHighlight;
-        const string version = "0.3";
-
+        const string version = "0.3.1";
+        const string emptyLine = @"
+";
         private const string CLSID_FIREWALL_MANAGER =
       "{304CE942-6E39-40D8-943A-B913C40C9CD4}";
 
         const string guidFWPolicy2 = "{E2B3C97F-6AE1-41AC-817A-F6F92166D7DD}";
         const string guidRWRule = "{2C5BC43E-3369-4C33-AB0C-BE9469677AF4}";
+        string insLoc = Environment.GetFolderPath(Environment.SpecialFolder.CommonProgramFilesX86) + "\\ShittyServerStopper\\";
 
-       
+        Color ttB = Color.FromArgb(60, 60, 60);
+        Color ttF = SystemColors.MenuHighlight;
+
         public void hentaiRape(int choice)
         {
             Type typeFWPolicy2 = Type.GetTypeFromCLSID(new Guid(guidFWPolicy2));
@@ -44,7 +49,7 @@ namespace Shitty_Server_Stopper
             newRule.Description = "Shitty Sever Stopper - Blocks connections to Hentai Rape Servers";
             newRule.Protocol = (int)NET_FW_IP_PROTOCOL_.NET_FW_IP_PROTOCOL_UDP;
             newRule.LocalPorts = "";
-            newRule.RemoteAddresses = "204.11.16.132,139.162.79.149,72.11.148.168,204.11.16.134,167.160.36.76,82.211.30.241,107.161.172.59";
+            newRule.RemoteAddresses = "204.11.16.132,139.162.79.149,72.11.148.168,204.11.16.134,167.160.36.76,82.211.30.241,107.161.172.59,107.161.172.41";
             newRule.Direction = NET_FW_RULE_DIRECTION_.NET_FW_RULE_DIR_OUT;
             newRule.Enabled = true;
             newRule.Grouping = "Shitty Server Stopper";
@@ -54,7 +59,7 @@ namespace Shitty_Server_Stopper
             if (choice == 1)
             {
                 bool exists = false;
-                foreach (string s in "204.11.16.132,139.162.79.149,72.11.148.168,204.11.16.134,167.160.36.76,82.211.30.241,107.161.172.59".Split(','))
+                foreach (string s in "204.11.16.132,139.162.79.149,72.11.148.168,204.11.16.134,167.160.36.76,82.211.30.241,107.161.172.59,107.161.172.41".Split(','))
                 {
                     if (!ipList.Items.Contains(s)) { ipList.Items.Add(s); }              
                 }
@@ -76,7 +81,7 @@ namespace Shitty_Server_Stopper
             else
             {
                 fwPolicy2.Rules.Remove("sss_hentairape");
-                foreach (string s in "204.11.16.132,139.162.79.149,72.11.148.168,204.11.16.134,167.160.36.76,82.211.30.241,107.161.172.59".Split(','))
+                foreach (string s in "204.11.16.132,139.162.79.149,72.11.148.168,204.11.16.134,167.160.36.76,82.211.30.241,107.161.172.59,107.161.172.41".Split(','))
                 {
                     ipList.Items.Remove(s);
                 }
@@ -188,7 +193,7 @@ namespace Shitty_Server_Stopper
             newRule.Description = "Shitty Sever Stopper - Blocks connections to Misc Servers";
             newRule.Protocol = (int)NET_FW_IP_PROTOCOL_.NET_FW_IP_PROTOCOL_UDP;
             newRule.LocalPorts = "";
-            newRule.RemoteAddresses = "74.91.112.57,66.85.14.37,74.91.116.113,66.150.121.176";
+            newRule.RemoteAddresses = "74.91.112.57,66.85.14.37,74.91.116.113,66.150.121.176,74.91.117.236";
             newRule.Direction = NET_FW_RULE_DIRECTION_.NET_FW_RULE_DIR_OUT;
             newRule.Enabled = true;
             newRule.Grouping = "Shitty Server Stopper";
@@ -198,7 +203,7 @@ namespace Shitty_Server_Stopper
             if (choice == 1)
             {
                 bool exists = false;
-                foreach (string s in "74.91.112.57,66.85.14.37,74.91.116.113,66.150.121.176".Split(','))
+                foreach (string s in "74.91.112.57,66.85.14.37,74.91.116.113,66.150.121.176,74.91.117.236".Split(','))
                 {
                     if (!ipList.Items.Contains(s)) { ipList.Items.Add(s); }
                 }
@@ -219,7 +224,7 @@ namespace Shitty_Server_Stopper
             else
             {
                 fwPolicy2.Rules.Remove("sss_misc");
-                foreach (string s in "74.91.112.57,66.85.14.37,74.91.116.113,66.150.121.176".Split(',')) 
+                foreach (string s in "74.91.112.57,66.85.14.37,74.91.116.113,66.150.121.176,74.91.117.236".Split(',')) 
                 {
                     ipList.Items.Remove(s);
                 }
@@ -634,7 +639,7 @@ namespace Shitty_Server_Stopper
         }
         private void Form1_Load(object sender, EventArgs e)
         {
-            
+             
 
             toolTip1.Draw += ToolTip1_Draw;
 
@@ -650,12 +655,38 @@ namespace Shitty_Server_Stopper
                 string shortCutSave = Environment.GetFolderPath(Environment.SpecialFolder.StartMenu);
                 file.Save(Path.Combine(shortCutSave, "Shitty Server Stopper.lnk"), false);
                 File.Create(Environment.GetFolderPath(Environment.SpecialFolder.CommonProgramFilesX86) + @"\ShittyServerStopper\firsttimesetupdone.dat").Close();
-
+                File.Create(Environment.GetFolderPath(Environment.SpecialFolder.CommonProgramFilesX86) + @"\ShittyServerStopper\theme_black.dat").Close();
                 File.WriteAllBytes(Environment.GetFolderPath(Environment.SpecialFolder.CommonProgramFilesX86) + @"\shitty_server_stopper_uninstaller.exe", Properties.Resources.shitty_server_stopper_uninstaller);
               
                 File.Create(Environment.GetFolderPath(Environment.SpecialFolder.CommonProgramFilesX86) + @"\ShittyServerStopper\blocked_ips.dat").Close();
                 Properties.Settings.Default.FirstStartUpDone = true;
                 Properties.Settings.Default.Save();
+            }
+
+            if (File.Exists(Environment.GetFolderPath(Environment.SpecialFolder.CommonProgramFilesX86) + "\\ShittyServerStopper\\blocked_ips.dat"))
+            {
+                Type typeFWPolicy3 = Type.GetTypeFromCLSID(new Guid(guidFWPolicy2));
+                Type typeFWRule2 = Type.GetTypeFromCLSID(new Guid(guidRWRule));
+                INetFwPolicy2 fwPolicy3 = (INetFwPolicy2)Activator.CreateInstance(typeFWPolicy3);
+                try
+                {
+                    string cts = File.ReadAllText(Environment.GetFolderPath(Environment.SpecialFolder.CommonProgramFilesX86) + "\\ShittyServerStopper\\blocked_ips.dat");
+                    List<String> officalList = new List<string>();
+                    foreach (string s in Properties.Resources.complete_list.Split(','))
+                    {
+                        officalList.Add(s);
+                    }
+                    foreach (string s in File.ReadAllText(Environment.GetFolderPath(Environment.SpecialFolder.CommonProgramFilesX86) + "\\ShittyServerStopper\\blocked_ips.dat").Split(','))
+                    {
+                        if (officalList.Contains(s))
+                        {
+                            cts = cts.Replace(s + ",", "");
+                            fwPolicy3.Rules.Remove("sss_" + s);                           
+                        }
+                    }
+                    File.WriteAllText(Environment.GetFolderPath(Environment.SpecialFolder.CommonProgramFilesX86) + "\\ShittyServerStopper\\blocked_ips.dat", cts);
+                }
+                catch { }
             }
 
             if (File.Exists(Environment.GetFolderPath(Environment.SpecialFolder.CommonProgramFilesX86) + @"\ShittyServerStopper\update.dat"))
@@ -723,11 +754,9 @@ namespace Shitty_Server_Stopper
                             break;
                         }
                     }
-                }
-            
+                }           
             }
-             
-
+            
             //reset();
             if (Properties.Settings.Default.HRBlocked == true)
             {
@@ -748,9 +777,19 @@ namespace Shitty_Server_Stopper
 
             update();
             update2();
+
             string contents;
-            using (var wc = new System.Net.WebClient())
-                contents = wc.DownloadString("http://wallymodz.weebly.com/uploads/5/3/7/8/53782675/sss_version.txt");
+            if (internetConnection() == true)
+            {             
+                using (var wc = new System.Net.WebClient())
+                    contents = wc.DownloadString("http://wallymodz.weebly.com/uploads/5/3/7/8/53782675/sss_version.txt");
+            }
+            else
+            {
+                contents = version;
+            }
+                  
+          
 
             if (contents != version)
             {
@@ -758,12 +797,53 @@ namespace Shitty_Server_Stopper
                 NewUpdate.ShowDialog();
 
             }
+
+            if (File.Exists(insLoc + "theme_white.dat"))
+            {
+                themeWhite();
+            }
+
+                if (File.Exists(Environment.GetFolderPath(Environment.SpecialFolder.CommonProgramFilesX86) + "\\ShittyServerStopper\\upl_recheck.dat"))
+            {
+                if (lewd4deadCheck.Checked == false) { File.Delete(Environment.GetFolderPath(Environment.SpecialFolder.CommonProgramFilesX86) + "\\ShittyServerStopper\\upl_recheck.dat"); return; }
+                lewd4deadCheck.Checked = false;
+                System.Threading.Thread.Sleep(100);
+                lewd4deadCheck.Checked = true;
+                File.Delete(Environment.GetFolderPath(Environment.SpecialFolder.CommonProgramFilesX86) + "\\ShittyServerStopper\\upl_recheck.dat");
+            }
+            if (File.Exists(Environment.GetFolderPath(Environment.SpecialFolder.CommonProgramFilesX86) + "\\ShittyServerStopper\\uph_recheck.dat"))
+            {
+                if (hentairapeCheckBox.Checked == false) { File.Delete(Environment.GetFolderPath(Environment.SpecialFolder.CommonProgramFilesX86) + "\\ShittyServerStopper\\uph_recheck.dat"); return; }
+                hentairapeCheckBox.Checked = false;
+                System.Threading.Thread.Sleep(100);
+                hentairapeCheckBox.Checked = true;
+                File.Delete(Environment.GetFolderPath(Environment.SpecialFolder.CommonProgramFilesX86) + "\\ShittyServerStopper\\uph_recheck.dat");
+            }
+            if (File.Exists(Environment.GetFolderPath(Environment.SpecialFolder.CommonProgramFilesX86) + "\\ShittyServerStopper\\upy_recheck.dat"))
+            {
+                if (ydCheck.Checked == false) { File.Delete(Environment.GetFolderPath(Environment.SpecialFolder.CommonProgramFilesX86) + "\\ShittyServerStopper\\upy_recheck.dat"); return; }
+                ydCheck.Checked = false;
+                System.Threading.Thread.Sleep(100);
+                ydCheck.Checked = true;
+                File.Delete(Environment.GetFolderPath(Environment.SpecialFolder.CommonProgramFilesX86) + "\\ShittyServerStopper\\upy_recheck.dat");
+            }
+            if (File.Exists(Environment.GetFolderPath(Environment.SpecialFolder.CommonProgramFilesX86) + "\\ShittyServerStopper\\upm_recheck.dat"))
+            {
+                if (xpmCheckBox.Checked == false) { File.Delete(Environment.GetFolderPath(Environment.SpecialFolder.CommonProgramFilesX86) + "\\ShittyServerStopper\\upm_recheck.dat"); return; }
+                xpmCheckBox.Checked = false;
+                System.Threading.Thread.Sleep(100);
+                xpmCheckBox.Checked = true;
+                File.Delete(Environment.GetFolderPath(Environment.SpecialFolder.CommonProgramFilesX86) + "\\ShittyServerStopper\\upm_recheck.dat");
+            }
+
+
+            
         }
 
         private void ToolTip1_Draw(object sender, DrawToolTipEventArgs e)
         {
-            toolTip1.BackColor = Color.FromArgb(60, 60, 60);
-            toolTip1.ForeColor = SystemColors.MenuHighlight;
+            toolTip1.BackColor = ttB;
+            toolTip1.ForeColor = ttF;
             e.DrawBackground();
             e.DrawBorder();
             e.DrawText();
@@ -920,7 +1000,7 @@ namespace Shitty_Server_Stopper
             {
                 if (s == ipTextBox.Text)
                 {
-                    MessageBox.Show(this, "Error 7: This IP is part of a group.", "Error 7", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    showError.ShowError("Error: 7", "IP Belongs to Group", "This IP Belongs to a Group, it cannot be added individually.");
                     ipTextBox.Text = "";
                     return;
                 }
@@ -937,7 +1017,7 @@ namespace Shitty_Server_Stopper
                         {
                             if (item == ipTextBox.Text)
                             {
-                                MessageBox.Show(this, "Error 1: That IP address is already being blocked.", "Error 1", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                showError.ShowError("Error: 1", "IP Already Blocked", "This IP Adress is already being blocked.");
                                 addtolist = false;
                             }
                             else
@@ -992,7 +1072,7 @@ namespace Shitty_Server_Stopper
                         }
                         else
                         {
-                            MessageBox.Show(this, "Error 6: Rule already exists", "Error 6", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            showError.ShowError("Error: 6", "Rule Already Exists", "Winodws Firewall already contains this rule.");
                             ipTextBox.Text = "";
                             return;
                         }
@@ -1000,14 +1080,14 @@ namespace Shitty_Server_Stopper
                 }
                 else
                 {
-                    MessageBox.Show(this, "Error 3: Invalid IP Address", "Error 3", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    showError.ShowError("Error: 3", "IP Adress Invalid", "Make sure the IP is in the correct format." + emptyLine + "Example: 192.168.2.1");
                     ipTextBox.Text = "";
                     return;
                 }
             }
             catch (Exception ex)
             {
-                MessageBox.Show(this, "Error 4:" + ex, "Error 4", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                showError.ShowError("Error: 4", "N/A", "Unknown Error Occured");
             }
             ipTextBox.Text = "";
         }
@@ -1039,7 +1119,7 @@ namespace Shitty_Server_Stopper
             }
             catch
             {
-                MessageBox.Show(this, "Error 2: You cannot remove this item.", "Error 2", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                showError.ShowError("Error: 2", "You Cannot Remove this Item", "There was an unknown error while attempting to remove item.");
             }
 
         }
@@ -1172,7 +1252,7 @@ namespace Shitty_Server_Stopper
             }
            catch
             {
-                MessageBox.Show(this, "Error 5: Couldn't Open File.", "Error 5", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                showError.ShowError("Error: 5", "Counln't Open File", "Error while attempting to open file. Please try again.");
             }
         }
         public void addRule(string name, string ip)
@@ -1273,6 +1353,126 @@ namespace Shitty_Server_Stopper
             {
                 removeSelected();
             }
+        }
+     
+        public void changeButtonsCLR(Color colourF, Color colourB, Color hoverClr)
+        {
+            List<Control> btns = new List<Control> ();
+            foreach (Control ctrls in this.Controls)
+            {
+                if (ctrls.GetType() == typeof(Button))
+                {
+                    btns.Add(ctrls);
+                }
+            }     
+            foreach (Button btn in btns)
+            {
+                btn.ForeColor = colourF;
+                btn.BackColor = colourB;
+                btn.FlatAppearance.MouseOverBackColor = hoverClr;
+            }              
+        }
+        
+        private void themeBtn_Click(object sender, EventArgs e)
+        {
+            if (!File.Exists(insLoc + "theme_white.dat") && !File.Exists(insLoc + "theme_black.dat"))
+            {
+                File.Create(insLoc + "theme_white.dat").Close();
+                themeWhite();
+            }
+
+            if (File.Exists(insLoc + "theme_black.dat"))
+            {
+                File.Delete(insLoc + "theme_black.dat");
+                File.Create(insLoc + "theme_white.dat").Close();
+                themeWhite();
+            }
+            else if (File.Exists(insLoc + "theme_white.dat"))
+            {
+                File.Delete(insLoc + "theme_white.dat");
+                File.Create(insLoc + "theme_black.dat").Close();
+                themeBlack();
+            }
+            ipList.Focus();
+        }
+        public void themeWhite()
+        {  
+            themeBtn.Text = "Dark Mode";
+            this.BackColor = Color.White;
+            ipList.BackColor = Color.Gray;
+            ipTextBox.BackColor = Color.Gray;
+            ipTextBox.ForeColor = Color.Black;
+            ipList.ForeColor = Color.Black;
+            changeButtonsCLR(Color.Black, Color.LightGray, Color.Silver);
+            ttF = Color.Black;
+            ttB = Color.White;
+
+            ipCMS.BackColor = Color.White;
+            iptextContext.BackColor = Color.White;
+
+            foreach (ToolStripItem item1 in ipCMS.Items)
+            {
+                item1.ForeColor = Color.Black;
+                item1.BackColor = Color.White;
+            }
+            foreach (ToolStripItem item2 in iptextContext.Items)
+            {
+                item2.ForeColor = Color.Black;
+                item2.BackColor = Color.White;
+            }
+            tss1.BackColor = Color.White;
+            tss2.BackColor = Color.White;
+        }
+        public void themeBlack()
+        {           
+            themeBtn.Text = "Light Mode";
+            ipList.BackColor = Color.FromArgb(50, 50, 50);
+            ipTextBox.BackColor = Color.FromArgb(50, 50, 50);
+            ipTextBox.ForeColor = SystemColors.MenuHighlight;
+            ipList.ForeColor = SystemColors.MenuHighlight;
+                this.BackColor = Color.FromArgb(64, 64, 64);
+            changeButtonsCLR(Color.FromArgb(119, 119, 119), Color.FromArgb(51, 51, 51), Color.FromArgb(60,60,60));
+            ttF = SystemColors.MenuHighlight;
+            ttB = Color.FromArgb(60,60,60);
+            ipCMS.BackColor = Color.FromArgb(60, 60, 60); // Boarder Color
+            iptextContext.BackColor = Color.FromArgb(60, 60, 60);
+            foreach (ToolStripItem item1 in ipCMS.Items)
+            {
+                item1.ForeColor = SystemColors.MenuHighlight;
+                item1.BackColor = Color.FromArgb(60,60,60);
+            }
+            foreach (ToolStripItem item2 in iptextContext.Items)
+            {
+                item2.ForeColor = SystemColors.MenuHighlight;
+                item2.BackColor = Color.FromArgb(60,60,60);
+            }
+            tss1.BackColor = Color.FromArgb(60, 60, 60);
+            tss2.BackColor = Color.FromArgb(60, 60, 60);
+        }
+        private void ipLabel_Click(object sender, EventArgs e)
+        {
+            showError.ShowError("Error: 9", "IP Adress Invalid", "Make sure the IP is in the correct format." + emptyLine + "Example: 192.168.2.1");
+        }
+        public bool internetConnection()
+        {
+            try
+            {
+                using (var client = new WebClient())
+                {
+                    using (client.OpenRead("http://clients3.google.com/generate_204"))
+                    {
+                        return true;
+                    }
+                }
+            }
+            catch
+            {
+                return false;
+            }
+        }
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            
         }
     }
 }

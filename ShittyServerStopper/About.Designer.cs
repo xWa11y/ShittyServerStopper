@@ -74,9 +74,9 @@
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(90)))));
             this.label1.Location = new System.Drawing.Point(10, 16);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(177, 18);
+            this.label1.Size = new System.Drawing.Size(189, 18);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Shitty Server Blocker v0.3";
+            this.label1.Text = "Shitty Server Blocker v0.3.1";
             // 
             // label2
             // 
@@ -84,7 +84,7 @@
             this.label2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Gray;
-            this.label2.Location = new System.Drawing.Point(18, 52);
+            this.label2.Location = new System.Drawing.Point(18, 60);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(561, 208);
             this.label2.TabIndex = 1;
@@ -97,7 +97,7 @@
             this.label3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.Gray;
-            this.label3.Location = new System.Drawing.Point(19, 276);
+            this.label3.Location = new System.Drawing.Point(19, 284);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(523, 80);
             this.label3.TabIndex = 2;
@@ -109,7 +109,7 @@
             this.steamLabel.AutoSize = true;
             this.steamLabel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
             this.steamLabel.LinkColor = System.Drawing.SystemColors.MenuHighlight;
-            this.steamLabel.Location = new System.Drawing.Point(537, 277);
+            this.steamLabel.Location = new System.Drawing.Point(537, 285);
             this.steamLabel.Name = "steamLabel";
             this.steamLabel.Size = new System.Drawing.Size(37, 13);
             this.steamLabel.TabIndex = 1;
@@ -123,7 +123,7 @@
             this.linkLabel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
             this.linkLabel1.ForeColor = System.Drawing.SystemColors.MenuHighlight;
             this.linkLabel1.LinkColor = System.Drawing.SystemColors.MenuHighlight;
-            this.linkLabel1.Location = new System.Drawing.Point(116, 341);
+            this.linkLabel1.Location = new System.Drawing.Point(116, 349);
             this.linkLabel1.Name = "linkLabel1";
             this.linkLabel1.Size = new System.Drawing.Size(97, 13);
             this.linkLabel1.TabIndex = 2;
@@ -179,8 +179,8 @@
             this.linkLabel10.ActiveLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
             this.linkLabel10.AutoSize = true;
             this.linkLabel10.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.linkLabel10.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.linkLabel10.Location = new System.Drawing.Point(260, 368);
+            this.linkLabel10.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(76)))), ((int)(((byte)(60)))));
+            this.linkLabel10.Location = new System.Drawing.Point(260, 376);
             this.linkLabel10.Name = "linkLabel10";
             this.linkLabel10.Size = new System.Drawing.Size(47, 13);
             this.linkLabel10.TabIndex = 8;
@@ -196,7 +196,7 @@
             this.linkLabel9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.linkLabel9.ForeColor = System.Drawing.SystemColors.MenuHighlight;
             this.linkLabel9.LinkColor = System.Drawing.SystemColors.MenuHighlight;
-            this.linkLabel9.Location = new System.Drawing.Point(429, 334);
+            this.linkLabel9.Location = new System.Drawing.Point(429, 342);
             this.linkLabel9.Name = "linkLabel9";
             this.linkLabel9.Size = new System.Drawing.Size(109, 15);
             this.linkLabel9.TabIndex = 7;
@@ -211,7 +211,7 @@
             this.linkLabel8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.linkLabel8.ForeColor = System.Drawing.SystemColors.MenuHighlight;
             this.linkLabel8.LinkColor = System.Drawing.SystemColors.MenuHighlight;
-            this.linkLabel8.Location = new System.Drawing.Point(357, 334);
+            this.linkLabel8.Location = new System.Drawing.Point(357, 342);
             this.linkLabel8.Name = "linkLabel8";
             this.linkLabel8.Size = new System.Drawing.Size(74, 15);
             this.linkLabel8.TabIndex = 6;
@@ -226,7 +226,7 @@
             this.linkLabel7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.linkLabel7.ForeColor = System.Drawing.SystemColors.MenuHighlight;
             this.linkLabel7.LinkColor = System.Drawing.SystemColors.MenuHighlight;
-            this.linkLabel7.Location = new System.Drawing.Point(324, 334);
+            this.linkLabel7.Location = new System.Drawing.Point(324, 342);
             this.linkLabel7.Name = "linkLabel7";
             this.linkLabel7.Size = new System.Drawing.Size(35, 15);
             this.linkLabel7.TabIndex = 5;
@@ -241,7 +241,7 @@
             this.linkLabel6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.linkLabel6.ForeColor = System.Drawing.SystemColors.MenuHighlight;
             this.linkLabel6.LinkColor = System.Drawing.SystemColors.MenuHighlight;
-            this.linkLabel6.Location = new System.Drawing.Point(257, 334);
+            this.linkLabel6.Location = new System.Drawing.Point(257, 342);
             this.linkLabel6.Name = "linkLabel6";
             this.linkLabel6.Size = new System.Drawing.Size(69, 15);
             this.linkLabel6.TabIndex = 4;
@@ -256,7 +256,7 @@
             this.linkLabel5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.linkLabel5.ForeColor = System.Drawing.SystemColors.MenuHighlight;
             this.linkLabel5.LinkColor = System.Drawing.SystemColors.MenuHighlight;
-            this.linkLabel5.Location = new System.Drawing.Point(152, 334);
+            this.linkLabel5.Location = new System.Drawing.Point(152, 342);
             this.linkLabel5.Name = "linkLabel5";
             this.linkLabel5.Size = new System.Drawing.Size(107, 15);
             this.linkLabel5.TabIndex = 3;
@@ -282,7 +282,7 @@
             this.label5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.Gray;
-            this.label5.Location = new System.Drawing.Point(29, 335);
+            this.label5.Location = new System.Drawing.Point(29, 343);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(125, 16);
             this.label5.TabIndex = 11;

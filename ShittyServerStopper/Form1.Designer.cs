@@ -37,11 +37,11 @@
             this.ipTextBox = new System.Windows.Forms.TextBox();
             this.iptextContext = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.undoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
+            this.tss1 = new System.Windows.Forms.ToolStripSeparator();
             this.cutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.copyToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.pasteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.tss2 = new System.Windows.Forms.ToolStripSeparator();
             this.selectAllToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ipLabel = new System.Windows.Forms.Label();
             this.addButton = new System.Windows.Forms.Button();
@@ -52,6 +52,7 @@
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
+            this.themeBtn = new System.Windows.Forms.Button();
             this.lewd4deadCheck = new System.Windows.Forms.CheckBox();
             this.ydCheck = new System.Windows.Forms.CheckBox();
             this.exportIP = new System.Windows.Forms.SaveFileDialog();
@@ -141,11 +142,11 @@
             this.iptextContext.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
             this.iptextContext.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.undoToolStripMenuItem,
-            this.toolStripSeparator2,
+            this.tss1,
             this.cutToolStripMenuItem,
             this.copyToolStripMenuItem1,
             this.pasteToolStripMenuItem,
-            this.toolStripSeparator1,
+            this.tss2,
             this.selectAllToolStripMenuItem});
             this.iptextContext.Name = "iptextContext";
             this.iptextContext.ShowImageMargin = false;
@@ -162,10 +163,10 @@
             this.undoToolStripMenuItem.Text = "Undo";
             this.undoToolStripMenuItem.Click += new System.EventHandler(this.undoToolStripMenuItem_Click);
             // 
-            // toolStripSeparator2
+            // tss1
             // 
-            this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(94, 6);
+            this.tss1.Name = "tss1";
+            this.tss1.Size = new System.Drawing.Size(94, 6);
             // 
             // cutToolStripMenuItem
             // 
@@ -194,11 +195,11 @@
             this.pasteToolStripMenuItem.Text = "Paste";
             this.pasteToolStripMenuItem.Click += new System.EventHandler(this.pasteToolStripMenuItem_Click);
             // 
-            // toolStripSeparator1
+            // tss2
             // 
-            this.toolStripSeparator1.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(94, 6);
+            this.tss2.ForeColor = System.Drawing.SystemColors.MenuHighlight;
+            this.tss2.Name = "tss2";
+            this.tss2.Size = new System.Drawing.Size(94, 6);
             // 
             // selectAllToolStripMenuItem
             // 
@@ -220,6 +221,7 @@
             this.ipLabel.Size = new System.Drawing.Size(61, 13);
             this.ipLabel.TabIndex = 11;
             this.ipLabel.Text = "IP Address:";
+            this.ipLabel.Click += new System.EventHandler(this.ipLabel_Click);
             // 
             // addButton
             // 
@@ -262,7 +264,7 @@
             this.hentairapeCheckBox.Location = new System.Drawing.Point(12, 328);
             this.hentairapeCheckBox.Name = "hentairapeCheckBox";
             this.hentairapeCheckBox.Size = new System.Drawing.Size(177, 17);
-            this.hentairapeCheckBox.TabIndex = 8;
+            this.hentairapeCheckBox.TabIndex = 9;
             this.hentairapeCheckBox.Text = "Block ALL Hentai Rape Servers";
             this.hentairapeCheckBox.UseVisualStyleBackColor = true;
             this.hentairapeCheckBox.CheckedChanged += new System.EventHandler(this.hentairapeCheckBox_CheckedChanged);
@@ -277,7 +279,7 @@
             this.xpmCheckBox.Location = new System.Drawing.Point(195, 328);
             this.xpmCheckBox.Name = "xpmCheckBox";
             this.xpmCheckBox.Size = new System.Drawing.Size(252, 17);
-            this.xpmCheckBox.TabIndex = 9;
+            this.xpmCheckBox.TabIndex = 10;
             this.xpmCheckBox.Text = "Block Misc Modded Servers (Not all servers yet)\r\n";
             this.xpmCheckBox.UseVisualStyleBackColor = true;
             this.xpmCheckBox.CheckedChanged += new System.EventHandler(this.xpmCheckBox_CheckedChanged);
@@ -302,7 +304,7 @@
             this.button1.Location = new System.Drawing.Point(553, 266);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(23, 23);
-            this.button1.TabIndex = 5;
+            this.button1.TabIndex = 6;
             this.button1.Text = "?";
             this.toolTip1.SetToolTip(this.button1, "Help and Information.");
             this.button1.UseVisualStyleBackColor = false;
@@ -344,6 +346,26 @@
             this.button3.UseVisualStyleBackColor = false;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
+            // themeBtn
+            // 
+            this.themeBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.themeBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.themeBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.themeBtn.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(48)))));
+            this.themeBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
+            this.themeBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.themeBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(90)))));
+            this.themeBtn.ImageIndex = 0;
+            this.themeBtn.Location = new System.Drawing.Point(472, 266);
+            this.themeBtn.Name = "themeBtn";
+            this.themeBtn.Size = new System.Drawing.Size(75, 23);
+            this.themeBtn.TabIndex = 5;
+            this.themeBtn.Text = "Light Mode";
+            this.themeBtn.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.toolTip1.SetToolTip(this.themeBtn, "Help and Information.");
+            this.themeBtn.UseVisualStyleBackColor = false;
+            this.themeBtn.Click += new System.EventHandler(this.themeBtn_Click);
+            // 
             // lewd4deadCheck
             // 
             this.lewd4deadCheck.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
@@ -354,7 +376,7 @@
             this.lewd4deadCheck.Location = new System.Drawing.Point(12, 305);
             this.lewd4deadCheck.Name = "lewd4deadCheck";
             this.lewd4deadCheck.Size = new System.Drawing.Size(175, 17);
-            this.lewd4deadCheck.TabIndex = 6;
+            this.lewd4deadCheck.TabIndex = 7;
             this.lewd4deadCheck.Text = "Block ALL Lewd4Dead Servers";
             this.lewd4deadCheck.UseVisualStyleBackColor = true;
             this.lewd4deadCheck.CheckedChanged += new System.EventHandler(this.lewd4deadCheck_CheckedChanged);
@@ -369,7 +391,7 @@
             this.ydCheck.Location = new System.Drawing.Point(195, 305);
             this.ydCheck.Name = "ydCheck";
             this.ydCheck.Size = new System.Drawing.Size(191, 17);
-            this.ydCheck.TabIndex = 7;
+            this.ydCheck.TabIndex = 8;
             this.ydCheck.Text = "Block ALL Yandere Attack Servers";
             this.ydCheck.UseVisualStyleBackColor = true;
             this.ydCheck.CheckedChanged += new System.EventHandler(this.ydCheck_CheckedChanged);
@@ -400,6 +422,7 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.ClientSize = new System.Drawing.Size(588, 355);
+            this.Controls.Add(this.themeBtn);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
@@ -449,15 +472,17 @@
         private System.Windows.Forms.ToolStripMenuItem cutToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem copyToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem pasteToolStripMenuItem;
-        private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
+        private System.Windows.Forms.ToolStripSeparator tss2;
         private System.Windows.Forms.ToolStripMenuItem selectAllToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem undoToolStripMenuItem;
-        private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
+        private System.Windows.Forms.ToolStripSeparator tss1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.SaveFileDialog exportIP;
         private System.Windows.Forms.OpenFileDialog openIP;
         private System.Windows.Forms.NotifyIcon notifyIcon1;
+        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button themeBtn;
     }
 }
 
