@@ -1,4 +1,13 @@
-v0.2.8 - 2/8/18
+v0.3.1 - 2/14/18
+- Fixed Uninstaller Not Installing Properly with new updates
+- Added automattically adding servers to offical lists
+- Added More Servers
+- Added Dark/Light Theme Changing
+- Added Custom Message Boxes
+- Added More Servers (eViL-mAnIa servers, and 1 Missing Hentai Rape)
+- Changed New Update Form UI
+_______________________________________________________________________________
+v0.3 - 2/8/18
 - Fixed duplicate blocks if adding a group IP as custom
 - Fixed the list not resizing smoothly
 - Fixed tab selecting order
